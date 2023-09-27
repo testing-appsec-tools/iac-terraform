@@ -1,0 +1,64 @@
+# The MIT License (MIT)
+# Copyright (c) 2014-2022 Avant, Sean Lingren
+
+############################
+## Environment #############
+############################
+name_prefix    = "vault-prod"
+region         = "us-west-1"
+dr_region      = "us-west-2"
+
+# Tags and tags_asg must be duplicated to handle the
+# map expected for most terraform tag blocks and list
+# of maps expected when tagging instances in an ASG
+tags = {
+  env        = "prod"
+  department = "devops"
+  syscontact = "john.doe"
+}
+
+############################
+## Route53 #################
+############################
+# Route53 support is under a switch `route53_enabled`
+route53_enabled     = true
+zone_id             = "AAA1BBB1CCC2DD" # Route53 zone id
+
+############################
+## Networking ##############
+############################
+vault_dns_address = "https://vault.example.com:443"
+
+vpc_id = "vpc-xxxxxxxx"
+
+alb_subnets = ["subnet-xxxxxxxx", "subnet-xxxxxxxx", "subnet-xxxxxxxx"]
+ec2_subnets = ["subnet-xxxxxxxx", "subnet-xxxxxxxx", "subnet-xxxxxxxx"]
+
+alb_allowed_ingress_cidrs = ["10.0.0.0/8"]
+
+############################
+## ALB #####################
+############################
+alb_certificate_arn = "arn:aws:iam::123456789012:server-certificate/vault.example.com"
+
+############################
+## EC2 #####################
+############################
+ami_id        = "ami-xxxxxxxx"
+instance_type = "r4.large"
+ssh_key_name  = "vault-ssh-key"
+
+asg_min_size         = 2
+asg_max_size         = 3
+asg_desired_capacity = 2
+
+############################
+## S3 ######################
+############################
+vault_resources_bucket_name = "vault-resources"
+vault_data_bucket_name      = "vault-data"
+
+############################
+## DynamoDB ################
+############################
+dynamodb_table_name = "vault-ha-coordination"
