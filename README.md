@@ -2,7 +2,7 @@
 
 **Please Note:** We take Avant's security very seriously. If you believe you have found a security issue in this module, please responsibly disclose by contacting us at security@avant.com.
 
-At Avant we use [Vault](https://www.vaultproject.io/) to manage secrets throughout our infrastructure. Because Vault manages sensitive information it is imperative that it is set up securely. The Packer Builder and Terraform Module in this repo are meant to accomplish just that.
+At Avant we use [Vault](https://www.vaultproject.io/) to manage secrets throughout our infrastructure. Because Vault manages sensitive information it is imperative hat it is set up securely. The Packer Builder and Terraform Module in this repo are meant to accomplish just that.
 
 There are a number of features unique to this module that make it attractive for a Vault setup:
 
