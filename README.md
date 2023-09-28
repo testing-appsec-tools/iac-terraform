@@ -8,7 +8,7 @@ There are a number of features unique to this module that make it attractive for
 
 - Uses only AWS services, so there are no external dependencies or backends to manage
 - HA Storage via DynamoDB easily handles node failures
-- The S3 storage backend and cross region replication make region failover simple and reliable
+- The S3 storage backend and cross region replication make region failover simple and reliabl
 - Versioning on the S3 buckets allows for secret recovery
 - S3 and DynamoDB scae with usage, meaning cost is automatically optimized
 - The Packer builder allows for simple live Vault upgrades
