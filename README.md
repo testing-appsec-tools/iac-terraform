@@ -17,7 +17,6 @@ There are a number of features unique to this module that make it attractive for
 ## Vault Architecture
 
 ![Architecture Map](https://raw.githubusercontent.com/avantoss/vault-infra/HEAD/_docs/architecture.png)
-
 ## Getting Started
 
 1. Modify the variables at the top of `packer/vault.json` to reflect your infrastructure
