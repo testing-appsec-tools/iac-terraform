@@ -4,7 +4,7 @@
 
 At Avant we use [Vault](https://www.vaultproject.io/) to manage secrets throughout our infrastructure. Because Vault manages sensitive information it is imperative hat it is set up securely. The Packer Builder and Terraform Module in this repo are meant to accomplish just that.
 
-There are a number of features unique to this module that make it attractive for a Vault setup:
+There are a number of features unique to this module that make it attractive for a Vault setup
 
 - Uses only AWS services, so there are no external dependencies or backends to manage
 - HA Storage via DynamoDB easily handles node failur
